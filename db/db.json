@@ -1,0 +1,116 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "profilePic": "https://images.pexels.com/photos/1435737/pexels-photo-1435737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "headerPic": "https://images.pexels.com/photos/2719301/pexels-photo-2719301.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "username": "@orange",
+      "name": "orange user",
+      "description": "fun description for orange user",
+      "following": 800,
+      "followers": 5053
+    },
+    {
+      "id": 2,
+      "profilePic": "https://images.pexels.com/photos/1258264/pexels-photo-1258264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "headerPic": "https://images.pexels.com/photos/1083822/pexels-photo-1083822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "username": "@strawberry",
+      "name": "strawberry user",
+      "description": "fun description for strawberry user",
+      "following": 770,
+      "followers": 1053
+    },
+    {
+      "id": 3,
+      "profilePic": "https://images.pexels.com/photos/1630588/pexels-photo-1630588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "headerPic": "https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "username": "@apple",
+      "name": "apple user",
+      "description": "fun description for apple user",
+      "following": 50,
+      "followers": 103
+    },
+    {
+      "id": 4,
+      "profilePic": "https://images.pexels.com/photos/23042/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "headerPic": "https://images.pexels.com/photos/1000653/pexels-photo-1000653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "username": "@grapes",
+      "name": "grapes user",
+      "description": "fun description for grapes user",
+      "following": 449,
+      "followers": 1092
+    }
+  ],
+  "tweets": [
+    {
+      "id": 1,
+      "userId": 1,
+      "tweet": "Lorem ipsum dolor sit amet. Et autem voluptatum qui dolores iure qui earum vero et dolor expedita qui distinctio iusto aut dicta vitae. Ab reprehenderit maiores ut officia assumenda est possimus sint quo saepe aliquid. ",
+      "time": "05/08/22",
+      "retweets": 30,
+      "quoteTweets": 5,
+      "likes": 70
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "tweet": "Ea unde labore aut voluptatem Quis aut nihil voluptatem. Ut harum ipsam aut consectetur consectetur aut facilis tempore ut amet dolorem.",
+      "time": "05/08/22",
+      "retweets": 40,
+      "quoteTweets": 10,
+      "likes": 100
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "tweet": "Et quisquam explicabo qui temporibus aspernatur sed facilis iste. Sed sint voluptates est eius sapiente et voluptas dolorum! ",
+      "time": "05/08/22",
+      "retweets": 240,
+      "quoteTweets": 100,
+      "likes": 10000
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "tweet": "Ad atque velit aut iure voluptas ex tenetur ut veritatis voluptatibus ut neque adipisci.",
+      "time": "05/08/22",
+      "retweets": 40,
+      "quoteTweets": 10,
+      "likes": 100
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "tweet": "At consequuntur maxime ea commodi nobis eum dignissimos corporis.",
+      "time": "05/08/22",
+      "retweets": 400,
+      "quoteTweets": 100,
+      "likes": 1000
+    },
+    {
+      "id": 6,
+      "userId": 2,
+      "tweet": "Ut harum recusandae et dolorum voluptas sed fugit similique non sint atque ut rerum quam.",
+      "time": "05/08/22",
+      "retweets": 20,
+      "quoteTweets": 2,
+      "likes": 50
+    },
+    {
+      "id": 7,
+      "userId": 3,
+      "tweet": "In incidunt quibusdam id error molestiae et aliquid voluptate eos autem quia.",
+      "time": "05/08/22",
+      "retweets": 40,
+      "quoteTweets": 10,
+      "likes": 100
+    }
+    
+  ],
+  
+  "comments": {
+    "id" :1,
+    "tweetId": 1,
+    "content": "this is a very valid comment" 
+  }
+}
