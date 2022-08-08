@@ -13,9 +13,9 @@ export type Tweet={
     id: number
     userId: number
     tweet: string
-    time: Date
+    time: string
     retweets: number
-    quoteTweets: number
+    replies: number
     likes: number 
 }
 

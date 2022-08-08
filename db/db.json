@@ -48,7 +48,7 @@
       "tweet": "Lorem ipsum dolor sit amet. Et autem voluptatum qui dolores iure qui earum vero et dolor expedita qui distinctio iusto aut dicta vitae. Ab reprehenderit maiores ut officia assumenda est possimus sint quo saepe aliquid. ",
       "time": "05/08/22",
       "retweets": 30,
-      "quoteTweets": 5,
+      "replies": 5,
       "likes": 70
     },
     {
@@ -57,7 +57,7 @@
       "tweet": "Ea unde labore aut voluptatem Quis aut nihil voluptatem. Ut harum ipsam aut consectetur consectetur aut facilis tempore ut amet dolorem.",
       "time": "05/08/22",
       "retweets": 40,
-      "quoteTweets": 10,
+      "replies": 10,
       "likes": 100
     },
     {
@@ -66,7 +66,7 @@
       "tweet": "Et quisquam explicabo qui temporibus aspernatur sed facilis iste. Sed sint voluptates est eius sapiente et voluptas dolorum! ",
       "time": "05/08/22",
       "retweets": 240,
-      "quoteTweets": 100,
+      "replies": 100,
       "likes": 10000
     },
     {
@@ -75,7 +75,7 @@
       "tweet": "Ad atque velit aut iure voluptas ex tenetur ut veritatis voluptatibus ut neque adipisci.",
       "time": "05/08/22",
       "retweets": 40,
-      "quoteTweets": 10,
+      "replies": 10,
       "likes": 100
     },
     {
@@ -84,7 +84,7 @@
       "tweet": "At consequuntur maxime ea commodi nobis eum dignissimos corporis.",
       "time": "05/08/22",
       "retweets": 400,
-      "quoteTweets": 100,
+      "replies": 100,
       "likes": 1000
     },
     {
@@ -93,7 +93,7 @@
       "tweet": "Ut harum recusandae et dolorum voluptas sed fugit similique non sint atque ut rerum quam.",
       "time": "05/08/22",
       "retweets": 20,
-      "quoteTweets": 2,
+      "replies": 2,
       "likes": 50
     },
     {
@@ -102,7 +102,7 @@
       "tweet": "In incidunt quibusdam id error molestiae et aliquid voluptate eos autem quia.",
       "time": "05/08/22",
       "retweets": 40,
-      "quoteTweets": 10,
+      "replies": 10,
       "likes": 100
     }
     
