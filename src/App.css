@@ -8,11 +8,12 @@
   grid-auto-flow: column;
   grid-template-columns: 0.25fr 0.5fr 0.25fr;
   height: 100vh;
-  font-family: "Helvetica Neue",Arial,sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .left-menu {
   background-color: white;
+  overflow-y: hidden;
 }
 
 .right-menu {
@@ -21,6 +22,7 @@
 
 main {
   background-color: chocolate;
+  padding: 20px;
 }
 
 .left-menu__panel {
@@ -39,7 +41,7 @@ main {
 
 .left-menu_ul li {
   font-size: 20px;
-  color:rgb(68, 68, 68);
+  color: rgb(68, 68, 68);
   font-weight: 200;
   display: grid;
   grid-auto-flow: column;
@@ -51,10 +53,29 @@ main {
   width: 50px;
 }
 
-.tweet-btn{
+.user-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.tweet-input-btn{
+  padding: 5px;
+  width: 80px;
+  background-color: rgb(29, 155, 240);
+  border: none;
+  height: 36px;
+  border-radius: 17px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.tweet-btn {
   padding: 5px;
   width: 220px;
-  background-color:rgb(29,155,240);
+  background-color: rgb(29, 155, 240);
   border: none;
   height: 46px;
   border-radius: 17px;
@@ -62,3 +83,23 @@ main {
   font-size: 17px;
   font-weight: 700;
 }
+
+.user-tweet {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 0.1fr 0.9fr;
+  border-bottom: 0.5px solid rgb(223, 223, 223);
+  padding: 20px;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 50px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: none;
+  font-size: 17px;
+resize:vertical;
+}
+
