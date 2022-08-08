@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Header } from "../components/header";
-import { Tweet } from "../types";
+import { Tweet, User } from "../types";
 
 export function Home() {
-    const [tweets, setTweets] =useState<Tweet[]>([])
+    const [tweets, setTweets] =useState<User[]>([])
 
     useEffect(()=>{
-        fetch('http://localhost:4000/tweets')
+        fetch('http://localhost:4000/users?_embed=tweets')
         .then(resp=>resp.json())
         .then(tweetsFromServer=> setTweets(tweetsFromServer) )
     },[])
@@ -31,30 +31,33 @@ export function Home() {
       </div>
       <div>
         {tweets.map((item)=>(
- <div className="tweets-container">
-          <img
-            src="https://images.pexels.com/photos/51312/kiwi-fruit-vitamins-healthy-eating-51312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            className="user-icon"
-          ></img>
-          <div>
-            <ul className="user-details">
-              <li className="user-name">Name</li>
-              <li>UserName</li>
-              <li>{item.time}</li>
-            </ul>
-            <div>
-              <p className="tweet-content">{item.tweet}</p>
-            </div>
-            <ul>
-              <li>{item.replies} comments</li>
-              <li>{item.retweets} retweets</li>
-              <li>{item.likes} likes</li>
-              <li>
-                <span className="material-symbols-outlined">ios_share</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+            item.tweets.map((tweet: Tweet)=>(
+                <div className="tweets-container">
+                <img
+                  src={item.profilePic}
+                  className="user-icon"
+                ></img>
+                <div>
+                  <ul className="user-details">
+                    <li className="user-name">{item.name}</li>
+                    <li>{item.username}</li>
+                    <li>{tweet.time}</li>
+                  </ul>
+                  <div>
+                    <p className="tweet-content">{tweet.tweet}</p>
+                  </div>
+                  <ul>
+                    <li>{tweet.replies} comments</li>
+                    <li>{tweet.retweets} retweets</li>
+                    <li>{tweet.likes} likes</li>
+                    <li>
+                      <span className="material-symbols-outlined">ios_share</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            ))
         ))}
        
       </div>

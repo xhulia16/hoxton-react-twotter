@@ -7,6 +7,7 @@ export type User={
     description:string 
     following:number 
     followers:number 
+    tweets: Tweet[]
 }    
 
 export type Tweet={
@@ -17,6 +18,7 @@ export type Tweet={
     retweets: number
     replies: number
     likes: number 
+    comments: Comment[]
 }
 
 export type Comment={
