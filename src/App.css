@@ -1,25 +1,64 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 .App {
-  text-align: center;
-  display:grid;
+  display: grid;
   grid-auto-flow: column;
-  grid-template-columns:0.25fr 0.5fr 0.25fr;
+  grid-template-columns: 0.25fr 0.5fr 0.25fr;
   height: 100vh;
-  font-size: 10px;
+  font-family: "Helvetica Neue",Arial,sans-serif;
 }
 
-.left-menu{
-  background-color: brown;
+.left-menu {
+  background-color: white;
 }
 
-.right-menu{
+.right-menu {
   background-color: cadetblue;
 }
 
-main{
+main {
   background-color: chocolate;
+}
+
+.left-menu__panel {
+  margin: 20px;
+  display: grid;
+  gap: 50px;
+  padding-left: 50px;
+  height: 100vh;
+}
+
+.left-menu_ul {
+  list-style: none;
+  display: grid;
+  gap: 15px;
+}
+
+.left-menu_ul li {
+  font-size: 20px;
+  color:rgb(68, 68, 68);
+  font-weight: 200;
+  display: grid;
+  grid-auto-flow: column;
+  width: fit-content;
+  gap: 15px;
+}
+
+.icon {
+  width: 50px;
+}
+
+.tweet-btn{
+  padding: 5px;
+  width: 220px;
+  background-color:rgb(29,155,240);
+  border: none;
+  height: 46px;
+  border-radius: 17px;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
 }
