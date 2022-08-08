@@ -1,6 +1,6 @@
 export function Header(){
     return(
-        <div>
+        <div className="header">
         <h3>Home</h3>
         </div>
     )
