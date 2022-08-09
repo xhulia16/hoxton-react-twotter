@@ -193,3 +193,17 @@ font-weight: 600;
 .trends-list a:hover {
   color: rgb(97, 97, 97);
 }
+
+.left-menu_ul a{
+  text-decoration: none;
+  color: black;
+  display: grid;
+  grid-auto-flow: column;
+  padding-right: 15px;
+  gap: 15px;
+}
+
+.left-menu_ul a:hover{
+  background-color: rgb(228, 228, 228);
+  border-radius: 30px;
+}

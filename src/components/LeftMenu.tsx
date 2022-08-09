@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export function LeftMenu() {
   return (
@@ -10,37 +11,37 @@ export function LeftMenu() {
               src="https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/twitter_logo_blue.png.twimg.768.png"
             ></img>
           </li>
-          <li>
+          <li> <Link to="/home">
             <span className="material-symbols-outlined">home</span>
-            Home
+            Home </Link>
           </li>
-          <li>
+          <li><a href="#">
             <span className="material-symbols-outlined">tag</span>
-            Explore
+            Explore</a>
           </li>
-          <li>
+          <li><a href="#">
             <span className="material-symbols-outlined">notifications</span>
-            Notifications
+            Notifications</a>
           </li>
-          <li>
+          <li><a href="#">
             <span className="material-symbols-outlined">mail</span>
-            Messages
+            Messages</a>
           </li>
-          <li>
+          <li><a href="#">
             <span className="material-symbols-outlined">bookmark</span>
-            Bookmarks
+            Bookmarks</a>
           </li>
-          <li>
+          <li><a href="#">
             <span className="material-symbols-outlined">list_alt</span>
-            Lists
+            Lists</a>
           </li>
-          <li>
+          <li><a href="#">
             <span className="material-symbols-outlined">person</span>
-            Profile
+            Profile</a>
           </li>
-          <li>
+          <li><a href="#">
             <span className="material-symbols-outlined">pending</span>
-            More
+            More</a>
           </li>
           <li>
             <button className="tweet-btn">Tweet</button>
