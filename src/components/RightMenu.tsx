@@ -5,7 +5,7 @@ export function RightMenu() {
         <label>
           <input
             className="search-twitter"
-            placeholder="Search Twitter"
+            placeholder="Search Twotter"
           ></input>
         </label>
         <div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { TweetHeader } from "../components/TweetHeader";
 import { User } from "../types";
 import { Tweet } from "../types";
@@ -12,19 +12,17 @@ export function SingleTweet() {
   useEffect(() => {
     fetch(`http://localhost:4000/tweets/${params.itemId}`)
       .then((resp) => resp.json())
-      .then((tweetsFromServer) => setTweet(tweetsFromServer))
-      //.then(data=> {});
+      .then((tweetsFromServer) => setTweet(tweetsFromServer));
+    //.then(data=> {});
   }, []);
 
-  let value=tweet?.userId
+  let value = tweet?.userId;
 
- useEffect(() => {
-    fetch(`http://localhost:4000/users/${value}` )
-    .then((resp) => resp.json())
-    .then((userFromServer) => setUser(userFromServer));
+  useEffect(() => {
+    fetch(`http://localhost:4000/users/${value}`)
+      .then((resp) => resp.json())
+      .then((userFromServer) => setUser(userFromServer));
   }, [tweet]);
-
-  
 
   if (tweet === null)
     return (
@@ -42,9 +40,11 @@ export function SingleTweet() {
 
   return (
     <div>
-        <TweetHeader/>
+      <TweetHeader />
       <div key={tweet.id} className="tweets-container">
+      <Link to={`/profile/${user.id}`}>
         <img src={user.profilePic} className="user-icon"></img>
+        </Link>
         <div>
           <ul className="user-details">
             <li className="user-name">{user.name}</li>
@@ -71,7 +71,7 @@ export function SingleTweet() {
           src="https://images.pexels.com/photos/51312/kiwi-fruit-vitamins-healthy-eating-51312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           className="user-icon"
         ></img>
-        <div >
+        <div>
           <form className="review-form">
             <textarea
               placeholder="Tweet your reply"
@@ -81,11 +81,9 @@ export function SingleTweet() {
           </form>
         </div>
       </div>
-          <ul className="comments">
-            <li>
-                Comment here
-            </li>
-          </ul>
+      <ul className="comments">
+        <li>Comment here</li>
+      </ul>
     </div>
   );
 }
