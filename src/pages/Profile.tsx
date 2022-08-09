@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ProfileHeader } from "../components/Profileheader";
-import { User } from "../types";
+import { Tweet, User } from "../types";
 
 export function Profile() {
   const [profile, setProfile]= useState<null |User>(null)
@@ -43,6 +43,41 @@ return (
       </div>
       </div>
       <div className="tweets">
+      
+            {profile.tweets.map((tweet: Tweet)=>(
+              <Link to={`/home/${tweet.id}`}>
+                <div key={tweet.id} className="tweets-container">
+                  <Link to={`/profile/${profile.id}`}>
+                <img
+                  src={profile.profilePic}
+                  className="user-icon"
+                ></img>
+                </Link>
+                <div>
+                  <ul className="user-details">
+                    <li className="user-name">{profile.name}</li>
+                    <li>{profile.username}</li>
+                    
+                    <li>{tweet.time}</li>
+                  </ul>
+                  
+                  <div>
+                    <p className="tweet-content">{tweet.tweet}</p>
+                  </div>
+                  
+                  <ul> 
+                    <li>{tweet.replies} comments</li>
+                    <li>{tweet.retweets} retweets</li>
+                    <li>{tweet.likes} likes</li>
+                    <li>
+                      <span className="material-symbols-outlined">ios_share</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              </Link>)
+              )}
+        
       </div>
     </div>
   );
