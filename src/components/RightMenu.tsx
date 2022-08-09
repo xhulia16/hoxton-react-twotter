@@ -11,11 +11,11 @@ export function RightMenu() {
         <div>
           <ul className="trends-list">
             <li className="trends-title">Trends for you</li>
-            <li>Trend 1</li>
-            <li>Trend 2</li>
-            <li>Trend 3</li>
-            <li>Trend 4</li>
-            <li>Trend 5</li>
+            <li><a href="#">Trend 1</a></li>
+            <li><a href="#">Trend 2</a></li>
+            <li><a href="#">Trend 3</a></li>
+            <li><a href="#">Trend 4</a></li>
+            <li><a href="#">Trend 5</a></li>
           </ul>
         </div>
       </div>

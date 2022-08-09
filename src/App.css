@@ -182,3 +182,14 @@ font-weight: 600;
   border: none;
 
 }
+
+
+.trends-list a{
+  text-decoration: none;
+  color: black;
+
+}
+
+.trends-list a:hover {
+  color: rgb(97, 97, 97);
+}
