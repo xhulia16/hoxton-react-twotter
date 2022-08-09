@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { TweetHeader } from "../components/TweetHeader";
 import { User } from "../types";
 import { Tweet } from "../types";
 
@@ -41,6 +42,7 @@ export function SingleTweet() {
 
   return (
     <div>
+        <TweetHeader/>
       <div key={tweet.id} className="tweets-container">
         <img src={user.profilePic} className="user-icon"></img>
         <div>

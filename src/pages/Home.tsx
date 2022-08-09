@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Header } from "../components/header";
 import { Tweet, User } from "../types";
 
 export function Home() {
@@ -13,6 +14,7 @@ export function Home() {
 
   return (
     <section className="home">
+       <Header />
       <div className="user-tweet">
         <img
           src="https://images.pexels.com/photos/51312/kiwi-fruit-vitamins-healthy-eating-51312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -33,14 +35,17 @@ export function Home() {
             item.tweets.map((tweet: Tweet)=>(
               <Link to={`/home/${tweet.id}`}>
                 <div key={tweet.id} className="tweets-container">
+                  <Link to={`/profile/${item.id}`}>
                 <img
                   src={item.profilePic}
                   className="user-icon"
                 ></img>
+                </Link>
                 <div>
                   <ul className="user-details">
                     <li className="user-name">{item.name}</li>
                     <li>{item.username}</li>
+                    
                     <li>{tweet.time}</li>
                   </ul>
                   
