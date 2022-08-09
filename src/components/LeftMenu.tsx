@@ -1,3 +1,4 @@
+
 export function LeftMenu() {
   return (
     <div className="left-menu">

@@ -30,7 +30,7 @@ export function Home() {
       <div>
         {tweets.map((item)=>(
             item.tweets.map((tweet: Tweet)=>(
-                <div className="tweets-container">
+                <div key={tweet.id} className="tweets-container">
                 <img
                   src={item.profilePic}
                   className="user-icon"
