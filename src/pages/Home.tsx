@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Tweet, User } from "../types";
 
 export function Home() {
@@ -30,6 +31,7 @@ export function Home() {
       <div>
         {tweets.map((item)=>(
             item.tweets.map((tweet: Tweet)=>(
+              <Link to={`/home/${tweet.id}`}>
                 <div key={tweet.id} className="tweets-container">
                 <img
                   src={item.profilePic}
@@ -41,10 +43,12 @@ export function Home() {
                     <li>{item.username}</li>
                     <li>{tweet.time}</li>
                   </ul>
+                  
                   <div>
                     <p className="tweet-content">{tweet.tweet}</p>
                   </div>
-                  <ul>
+                  
+                  <ul> 
                     <li>{tweet.replies} comments</li>
                     <li>{tweet.retweets} retweets</li>
                     <li>{tweet.likes} likes</li>
@@ -54,7 +58,7 @@ export function Home() {
                   </ul>
                 </div>
               </div>
-
+              </Link>
             ))
         ))}
        

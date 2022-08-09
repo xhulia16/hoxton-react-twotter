@@ -12,7 +12,7 @@ export type User={
 
 export type Tweet={
     id: number
-    userId: number
+    userId: number|null
     tweet: string
     time: string
     retweets: number

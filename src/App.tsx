@@ -5,6 +5,7 @@ import { LeftMenu } from './components/LeftMenu'
 import { RightMenu } from './components/RightMenu'
 import { Home } from './pages/Home'
 import { PageNotFound } from './pages/pageNotFound'
+import { SingleTweet } from './pages/SingleTweet'
 
 function App() {
 
@@ -14,8 +15,9 @@ function App() {
     <main>
     <Header />
      <Routes>
-      <Route index element={< Navigate to='/home' />} />
+     <Route index element={< Navigate to='/home' />} />
      <Route path= '/home' element={<Home/>}/>
+     <Route path= '/home/:itemId' element={<SingleTweet/>}/>
      <Route path='*' element={<PageNotFound />} />
      </Routes>
      </main>
