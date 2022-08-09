@@ -64,6 +64,26 @@ export function SingleTweet() {
           </ul>
         </div>
       </div>
+      <div className="user-reply">
+        <img
+          src="https://images.pexels.com/photos/51312/kiwi-fruit-vitamins-healthy-eating-51312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          className="user-icon"
+        ></img>
+        <div >
+          <form className="review-form">
+            <textarea
+              placeholder="Tweet your reply"
+              className="tweet-input"
+            ></textarea>
+            <button className="tweet-input-btn">Reply</button>
+          </form>
+        </div>
+      </div>
+          <ul className="comments">
+            <li>
+                Comment here
+            </li>
+          </ul>
     </div>
   );
 }
