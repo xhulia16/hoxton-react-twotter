@@ -25,20 +25,20 @@ export function Home() {
             onSubmit={(event) => {
               event.preventDefault();
               fetch("http://localhost:4000/tweets", {
-                method: 'POST',
+                method: "POST",
                 headers: {
-                  'Content-Type': 'application/json'
+                  "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                userId: 5,
-                tweet: event.target.input.value,
-                time: 10 / 8,
-                retweets: 0,
-                replies: 0,
-                likes: 0,
-                })
-              })
-             
+                  userId: 5,
+                  tweet: event.target.input.value,
+                  time: 10 / 8,
+                  retweets: 0,
+                  replies: 0,
+                  likes: 0,
+                }),
+              });
+
               let tweet = {
                 userId: 5,
                 tweet: event.target.input.value,
@@ -48,10 +48,8 @@ export function Home() {
                 likes: 0,
                 comments: "",
               };
-              console.log(tweet)
 
-
-              event.target.reset
+              event.target.reset();
             }}
           >
             <textarea

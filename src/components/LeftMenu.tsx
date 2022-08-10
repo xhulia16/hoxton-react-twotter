@@ -35,9 +35,9 @@ export function LeftMenu() {
             <span className="material-symbols-outlined">list_alt</span>
             Lists</a>
           </li>
-          <li><a href="#">
+          <li><Link to="/profile/5">
             <span className="material-symbols-outlined">person</span>
-            Profile</a>
+            Profile</Link>
           </li>
           <li><a href="#">
             <span className="material-symbols-outlined">pending</span>
