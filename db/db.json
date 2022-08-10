@@ -134,10 +134,13 @@
       "id": 9
     }
   ],
-  "comments": {
+  "comments": [ 
+  {
     "id": 1,
     "tweetId": 1,
     "userId": 2,
     "content": "this is a very valid comment"
   }
+]
+  
 }

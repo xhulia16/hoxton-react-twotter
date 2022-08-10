@@ -90,9 +90,9 @@ console.log(params.itemId)
           </form>
         </div>
       </div>
-      {/* <Comments
-      item={params.itemId}
-      /> */}
+      <Comments
+      item={tweet.id}
+      />
     </div>
   );
 }
