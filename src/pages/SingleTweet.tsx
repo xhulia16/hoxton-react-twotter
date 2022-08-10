@@ -4,10 +4,12 @@ import { Comments } from "../components/comments";
 import { TweetHeader } from "../components/TweetHeader";
 import { User } from "../types";
 import { Tweet } from "../types";
+import { Comment } from "../types";
 
 export function SingleTweet() {
   const [tweet, setTweet] = useState<null | Tweet>(null);
   const [user, setUser] = useState<null | User>(null);
+  const [comments, setComments]=useState<Comment[]>([])
   const params = useParams();
 
   useEffect(() => {
@@ -16,21 +18,20 @@ export function SingleTweet() {
       .then((tweetsFromServer) => {
         setTweet(tweetsFromServer);
         const value = tweetsFromServer.userId;
+        const idValue=tweetsFromServer.id;
         {
           fetch(`http://localhost:4000/users/${value}`)
             .then((resp) => resp.json())
             .then((userFromServer) => setUser(userFromServer));
         }
+        {
+          fetch(`http://localhost:4000/tweets/${idValue}/comments`)
+             .then(resp=>resp.json())
+            .then((commentsFromServer) => setComments(commentsFromServer))
+        }
       });
   }, []);
 
-  //let value = tweet?.userId;
-
-  // useEffect(() => {
-  //   fetch(`http://localhost:4000/users/${value}`)
-  //     .then((resp) => resp.json())
-  //     .then((userFromServer) => setUser(userFromServer));
-  // }, [tweet]);
 
   if (tweet === null)
     return (
@@ -100,11 +101,12 @@ export function SingleTweet() {
               })
 
               let reply={
+                id: 10,
                 userId: 5,
                 tweetId: tweet.id,
                 content: event.target.reply.value,
-              }
-              
+              };
+            setComments([...comments, reply])
               event.target.reset()
             }}
           >
@@ -117,7 +119,14 @@ export function SingleTweet() {
           </form>
         </div>
       </div>
-      <Comments item={tweet.id} />
+      <ul className="comments">
+                
+                {comments.map(item=> (
+                    <li>
+                    <p>{item.content}</p>
+                </li>
+                ))}
+            </ul>
     </div>
   );
 }
