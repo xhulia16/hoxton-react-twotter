@@ -13,14 +13,15 @@ export function SingleTweet() {
   useEffect(() => {
     fetch(`http://localhost:4000/tweets/${params.itemId}`)
       .then((resp) => resp.json())
-      .then((tweetsFromServer) => {setTweet(tweetsFromServer) 
-      const value= tweetsFromServer.userId;
-      {
-        fetch(`http://localhost:4000/users/${value}`)
-        .then((resp) => resp.json())
-        .then((userFromServer) => setUser(userFromServer));
-      };
-    })
+      .then((tweetsFromServer) => {
+        setTweet(tweetsFromServer);
+        const value = tweetsFromServer.userId;
+        {
+          fetch(`http://localhost:4000/users/${value}`)
+            .then((resp) => resp.json())
+            .then((userFromServer) => setUser(userFromServer));
+        }
+      });
   }, []);
 
   //let value = tweet?.userId;
@@ -45,14 +46,14 @@ export function SingleTweet() {
       </div>
     );
 
-console.log(params.itemId)
+  console.log(params.itemId);
 
   return (
     <div>
       <TweetHeader />
       <div key={tweet.id} className="tweets-container">
-      <Link to={`/profile/${user.id}`}>
-        <img src={user.profilePic} className="user-icon"></img>
+        <Link to={`/profile/${user.id}`}>
+          <img src={user.profilePic} className="user-icon"></img>
         </Link>
         <div>
           <ul className="user-details">
@@ -81,8 +82,34 @@ console.log(params.itemId)
           className="user-icon"
         ></img>
         <div>
-          <form className="review-form">
+          <form
+            className="review-form"
+            onSubmit={(event) => {
+              event.preventDefault();
+
+              fetch('http://localhost:4000/comments',{
+                method: "POST",
+                headers: {
+                  "Content-type": "application/json",
+                },
+                body: JSON.stringify({
+                  userId: 5,
+                  tweetId: tweet.id,
+                  content: event.target.reply.value,
+                })
+              })
+
+              let reply={
+                userId: 5,
+                tweetId: tweet.id,
+                content: event.target.reply.value,
+              }
+              
+              event.target.reset()
+            }}
+          >
             <textarea
+              name="reply"
               placeholder="Tweet your reply"
               className="tweet-input"
             ></textarea>
@@ -90,9 +117,7 @@ console.log(params.itemId)
           </form>
         </div>
       </div>
-      <Comments
-      item={tweet.id}
-      />
+      <Comments item={tweet.id} />
     </div>
   );
 }
