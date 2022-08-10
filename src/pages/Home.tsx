@@ -21,10 +21,43 @@ export function Home() {
           className="user-icon"
         ></img>
         <div>
-          <form>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+              fetch("http://localhost:4000/tweets", {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                userId: 5,
+                tweet: event.target.input.value,
+                time: 10 / 8,
+                retweets: 0,
+                replies: 0,
+                likes: 0,
+                })
+              })
+             
+              let tweet = {
+                userId: 5,
+                tweet: event.target.input.value,
+                time: 10 / 8,
+                retweets: 0,
+                replies: 0,
+                likes: 0,
+                comments: "",
+              };
+              console.log(tweet)
+
+
+              event.target.reset
+            }}
+          >
             <textarea
               placeholder="What's happening?"
               className="tweet-input"
+              name="input"
             ></textarea>
             <button className="tweet-input-btn">Tweet</button>
           </form>

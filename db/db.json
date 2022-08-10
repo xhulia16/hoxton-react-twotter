@@ -39,6 +39,16 @@
       "description": "fun description for grapes user",
       "following": 449,
       "followers": 1092
+    },
+    {
+      "id": 5,
+      "profilePic": "https://images.pexels.com/photos/51312/kiwi-fruit-vitamins-healthy-eating-51312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "headerPic": "https://images.pexels.com/photos/1000653/pexels-photo-1000653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "username": "@kiwi",
+      "name": "kiwi user",
+      "description": "fun description for kiwi user",
+      "following": 49,
+      "followers": 102
     }
   ],
   "tweets": [
@@ -105,12 +115,10 @@
       "replies": 10,
       "likes": 100
     }
-    
   ],
-  
   "comments": {
-    "id" :1,
+    "id": 1,
     "tweetId": 1,
-    "content": "this is a very valid comment" 
+    "content": "this is a very valid comment"
   }
 }
