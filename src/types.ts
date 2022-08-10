@@ -8,6 +8,7 @@ export type User={
     following:number 
     followers:number 
     tweets: Tweet[]
+    comments: Comment[]
 }    
 
 export type Tweet={
@@ -23,6 +24,7 @@ export type Tweet={
 
 export type Comment={
     id:number
+    userId: number
     tweetId: number
     content: string 
 }
