@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { Comments } from "../components/comments";
 import { TweetHeader } from "../components/TweetHeader";
 import { User } from "../types";
 import { Tweet } from "../types";
@@ -12,17 +13,23 @@ export function SingleTweet() {
   useEffect(() => {
     fetch(`http://localhost:4000/tweets/${params.itemId}`)
       .then((resp) => resp.json())
-      .then((tweetsFromServer) => setTweet(tweetsFromServer));
-    //.then(data=> {});
+      .then((tweetsFromServer) => {setTweet(tweetsFromServer) 
+      const value= tweetsFromServer.userId;
+      {
+        fetch(`http://localhost:4000/users/${value}`)
+        .then((resp) => resp.json())
+        .then((userFromServer) => setUser(userFromServer));
+      };
+    })
   }, []);
 
-  let value = tweet?.userId;
+  //let value = tweet?.userId;
 
-  useEffect(() => {
-    fetch(`http://localhost:4000/users/${value}`)
-      .then((resp) => resp.json())
-      .then((userFromServer) => setUser(userFromServer));
-  }, [tweet]);
+  // useEffect(() => {
+  //   fetch(`http://localhost:4000/users/${value}`)
+  //     .then((resp) => resp.json())
+  //     .then((userFromServer) => setUser(userFromServer));
+  // }, [tweet]);
 
   if (tweet === null)
     return (
@@ -37,6 +44,8 @@ export function SingleTweet() {
         <h1>Loading...</h1>
       </div>
     );
+
+console.log(params.itemId)
 
   return (
     <div>
@@ -81,9 +90,9 @@ export function SingleTweet() {
           </form>
         </div>
       </div>
-      <ul className="comments">
-        <li>Comment here</li>
-      </ul>
+      {/* <Comments
+      item={params.itemId}
+      /> */}
     </div>
   );
 }

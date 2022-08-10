@@ -123,12 +123,21 @@
       "replies": 0,
       "likes": 0,
       "id": 8
+    },
+    {
+      "userId": 5,
+      "tweet": "",
+      "time": 1.25,
+      "retweets": 0,
+      "replies": 0,
+      "likes": 0,
+      "id": 9
     }
   ],
   "comments": {
     "id": 1,
     "tweetId": 1,
-    "userId":2,
+    "userId": 2,
     "content": "this is a very valid comment"
   }
 }
